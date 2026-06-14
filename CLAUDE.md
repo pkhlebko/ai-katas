@@ -56,3 +56,7 @@ When adding new user-facing text, add keys to all three locale files and access 
 ### Data types
 
 `src/data/destinations.ts` defines core types: `Destination` (id, name, country, bestFor, pace, priceFrom, flightTime, blurb, highlights[]) and `TravelPace` (`slow | balanced | fast`).
+
+## Kata task
+
+This branch is for the OpenSpec Development kata. An OpenSpec specification will drive new feature development. Create the spec first, then implement against it.
