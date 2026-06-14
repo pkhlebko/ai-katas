@@ -56,3 +56,16 @@ When adding new user-facing text, add keys to all three locale files and access 
 ### Data types
 
 `src/data/destinations.ts` defines core types: `Destination` (id, name, country, bestFor, pace, priceFrom, flightTime, blurb, highlights[]) and `TravelPace` (`slow | balanced | fast`).
+
+## MCP Configuration
+
+This project uses MCP servers configured in `.mcp.json`:
+
+- `chrome-devtools` — browser inspection
+- `mcp-atlassian` — Jira and Confluence integration
+
+See `KATA-INSTRUCTIONS.md` for setup details including token configuration.
+
+## Kata task
+
+This branch is for the MCP kata. Read the Jira ticket via MCP, implement the Favorites feature, and publish release notes to Confluence.
