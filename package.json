@@ -12,6 +12,7 @@
     "test": "vitest",
     "test:ui": "vitest --ui --coverage",
     "test:coverage": "vitest run --coverage",
+    "validate": "npm run build && npm run lint && npm run test:coverage",
     "prepare": "husky"
   },
   "dependencies": {
