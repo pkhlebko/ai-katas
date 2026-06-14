@@ -56,3 +56,20 @@ When adding new user-facing text, add keys to all three locale files and access 
 ### Data types
 
 `src/data/destinations.ts` defines core types: `Destination` (id, name, country, bestFor, pace, priceFrom, flightTime, blurb, highlights[]) and `TravelPace` (`slow | balanced | fast`).
+
+## MCP Configuration
+
+This project uses MCP servers configured in `.mcp.json`:
+
+- `chrome-devtools` — browser inspection
+- `mcp-atlassian` — Jira and Confluence integration
+
+See `KATA-INSTRUCTIONS.md` for setup details including token configuration.
+
+## Codemie
+
+This branch includes the Codemie discovery workflow documented in `CODEMIE-PLAN.md`.
+
+## Kata task
+
+This branch is for the Codemie kata. Explore the Codemie platform, connect Jira integration, and document the workflow.
