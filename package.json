@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui --coverage",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "validate": "npm run build && npm run lint && npm run test:coverage"
   },
   "dependencies": {
     "i18next": "^26.0.1",
