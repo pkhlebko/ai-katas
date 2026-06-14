@@ -1,15 +1,17 @@
-# Northstar Travel
+# Kata 3: Unit Test Coverage
 
-Small React travel-planning sample built with Vite and TypeScript.
+> **Reference solution branch.** For the starting point, checkout `kata-3-start`.
 
-## What it includes
+This branch contains the completed unit test coverage implementation for the Northstar Travel app, with 95%+ coverage across lines, functions, branches, and statements.
 
-- A planner page with destination cards, filtering, and a booking request form
-- A generated booking summary based on traveler inputs
-- A separate travel-guides route with practical planning content
-- Rich product copy across cards, forms, summaries, and FAQ sections
+## What was implemented
 
-## Run locally
+- Test files for all utility functions, services, i18n content hooks, pages, and components
+- Coverage gate enforced at 95% (lines, functions, branches, statements) in `vite.config.ts`
+- Tests use Vitest + React Testing Library + jest-dom
+- Agent skill at `.claude/skill/unit-test/SKILL.md`
+
+## Quick Start
 
 ```bash
 npm install
@@ -19,6 +21,11 @@ npm run dev
 ## Verification
 
 ```bash
-npm run lint
-npm run build
+npm run test:coverage
 ```
+
+All four thresholds pass at 95%:
+- Lines ≥ 95%
+- Functions ≥ 95%
+- Branches ≥ 95%
+- Statements ≥ 95%
