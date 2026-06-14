@@ -10,6 +10,7 @@ npm run build        # TypeScript check + production build
 npm run lint         # ESLint
 npm test             # Run Vitest (watch mode)
 npm run test:coverage  # Coverage report (enforced: 95% lines/functions/statements/branches)
+npm run validate     # Build + lint + coverage (CI-ready mechanical checks)
 ```
 
 To run a single test file:
@@ -56,3 +57,11 @@ When adding new user-facing text, add keys to all three locale files and access 
 ### Data types
 
 `src/data/destinations.ts` defines core types: `Destination` (id, name, country, bestFor, pace, priceFrom, flightTime, blurb, highlights[]) and `TravelPace` (`slow | balanced | fast`).
+
+## Kata Validation
+
+This repo is an AI kata collection. Each branch is a separate exercise.
+
+**Mechanical validation:** `npm run validate` — runs build + lint + coverage. Exits 0/1 for CI.
+
+**Qualitative validation:** `/validate` skill — detects which kata branch you're on, runs automated checks, assesses code quality, and gives structured ✅/⚠️/❌ feedback per criterion. See `.claude/skills/validate/` for details.
