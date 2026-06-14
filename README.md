@@ -1,15 +1,18 @@
-# Northstar Travel
+# Kata 2: Internationalization
 
-Small React travel-planning sample built with Vite and TypeScript.
+> **Reference solution branch.** For the starting point, checkout `kata-2-start`.
 
-## What it includes
+This branch contains the completed internationalization implementation for the Northstar Travel app.
 
-- A planner page with destination cards, filtering, and a booking request form
-- A generated booking summary based on traveler inputs
-- A separate travel-guides route with practical planning content
-- Rich product copy across cards, forms, summaries, and FAQ sections
+## What was implemented
 
-## Run locally
+- `i18next` and `react-i18next` configured with language detection and `localStorage` persistence
+- Three locale files: English (`en`), Lithuanian (`lt`), Mandarin Chinese (`zh`)
+- `useLocalizedContent()` hook for typed access to structured content (destinations, FAQs, guides)
+- Language switcher component persisting choice across sessions
+- All hardcoded English text replaced with translation keys
+
+## Quick Start
 
 ```bash
 npm install
@@ -22,3 +25,9 @@ npm run dev
 npm run lint
 npm run build
 ```
+
+Confirm:
+
+- All three languages render correctly when selected
+- Language choice persists across page reloads (`localStorage`)
+- `<html lang>` attribute updates on language switch
