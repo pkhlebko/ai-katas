@@ -26,7 +26,7 @@ description: >-
 Open `coverage/index.html` in a browser for a line-by-line HTML report.
 
 **Coverage thresholds** (CI will fail below these):
-lines 80% · functions 80% · branches 75% · statements 80%
+lines 95% · functions 95% · branches 95% · statements 95%
 
 ## File placement
 
