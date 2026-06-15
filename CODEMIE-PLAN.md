@@ -1,18 +1,38 @@
-# AI Kata — Codemie Discovery
+# AI Kata — Codemie Discovery Plan
 
-## Plan
+Document your Codemie exploration here as you complete each step. This file is your deliverable.
 
-1. Create Jira integration in Codieme platform
-2. Create Own BI Assistant and add Jira integration in the tools
-3. Check does Assistant has access to read and find the ticket EPMGDLT-1565
-4. Go to VS code install AI/RUN CODEMIE plugin and login
-5. For using CODEMIE plugin switch on VPN
-6. Check Descrption of the ticket again and see that additional infromation sync in the UI Codemie also
-7. Make command /codemie:codemie-init into Claude-code (added some helpfull additional skill to the project and create MD specification files about project)
-8. codemie setup assistants and my BI assistant
-9. @"my-own-bi-assistant (agent)" please fetch deatils from Jira ticket EPMGDLT-1565
-10. Install /codemie:codemie-subagents
-11. /writing-plans write the plan of implementation using description from EPMGDLT-1565 ticket
-12. Show statistics https://codemie.lab.epam.com/#/settings/profile
-13. Add KB Confluence integration
-14. Create release notes for the current task
+## 1. Setup
+
+- [ ] Jira integration created in Codemie platform
+- [ ] VS Code Codemie (AI/RUN) plugin installed and logged in
+- [ ] VPN connected (required for Codemie access)
+
+## 2. BI Assistant Configuration
+
+- [ ] Personal BI Assistant created
+- [ ] Jira integration added to the assistant's tools
+- [ ] Assistant can find and read ticket EPMGDLT-1565
+
+**What ticket EPMGDLT-1565 describes:**
+
+<!-- Fill in: what feature does the ticket ask for? -->
+
+## 3. Implementation Plan
+
+<!-- Generated via your Codemie assistant or /writing-plans skill -->
+
+## 4. Confluence Knowledge Base
+
+- [ ] Confluence integration added to the assistant
+- [ ] Knowledge base accessible from the assistant
+
+## 5. Release Notes
+
+- [ ] Release notes created as a Confluence child page
+- **Page title:** `<Your Name> — EPMGDLT-1565 — Release Notes`
+- **Location:** GDOKB space → Europe East → EPAM Lithuania → Lithuania Organizational Network → Lithuania Practices Nodes → AI KATA MCP
+
+## Notes
+
+<!-- Anything surprising, useful, or worth sharing from your Codemie exploration -->
