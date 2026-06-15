@@ -1,67 +1,48 @@
-# CLAUDE.md
+# CLAUDE.md — Kata 1: Legacy Modernization
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance for the **Legacy Modernization kata**. The work happens in the **kelp404/angular-form-builder** repository, not in Northstar Travel.
 
-## Commands
-
-```bash
-npm run dev          # Start Vite dev server
-npm run build        # TypeScript check + production build
-npm run lint         # ESLint
-npm test             # Run Vitest (watch mode)
-npm run test:coverage  # Coverage report (enforced: 95% lines/functions/statements/branches)
-npm run validate     # Build + lint + coverage (CI-ready mechanical checks)
-```
-
-To run a single test file:
+## Commands (inside the cloned source repo)
 
 ```bash
-npx vitest run src/lib/budgetUtils.test.ts
+npm install          # Install Node dependencies
+grunt dev            # Start legacy Grunt dev server
+bower install        # Install Bower front-end dependencies (if grunt dev fails)
 ```
 
-Commits must follow conventional commit format (enforced by commitlint + Husky).
+## Architecture (Legacy Source)
 
-## Architecture
+**kelp404/angular-form-builder** — an AngularJS 1.x form builder circa 2015.
 
-**Northstar Travel** — a React 19 + TypeScript travel planning SPA demonstrating i18n patterns.
+### Key files
 
-### Key layers
+- `Gruntfile.js` — build pipeline (Grunt tasks: concat, uglify, sass, watch)
+- `bower.json` — front-end package manifest (AngularJS, jQuery, etc.)
+- `package.json` — Node dev-tool dependencies (grunt-cli, grunt plugins)
+- `src/js/` — Angular controllers, directives, services
+- `src/scss/` — SASS stylesheets
+- `index.html` / `demo/` — entry points and demo forms
 
-**Pages** (`src/pages/`) — Three routes via React Router 7:
+### Build chain
 
-- `/` — `HomePage`: stateful page managing destination selection, booking form fields, validation, and summary display
-- `/guides` — `GuidesPage`
-- `/help` — `HelpPage`
+Grunt → Bower → RequireJS. Node.js is only for the build tooling, not the runtime.
 
-**Services** (`src/services/`) — Pure business logic, no React dependencies:
+## Modernization Goals
 
-- `bookingRequestBuilder.ts`: assembles form data, estimates cost, formats summaries
-- `tripRecommender.ts`: scores/ranks destinations by budget affordability and pace preference
+1. Make the original AngularJS app run locally (fix legacy dependency issues)
+2. Explore and document the existing form-builder behavior
+3. Rewrite using a modern stack (React, Vue, or Angular 17+)
+4. Add new controls and UX:
+   - switch / toggle control
+   - date picker control
+   - dark theme
+   - theme switcher
 
-**Lib** (`src/lib/`) — Utility functions:
+## AI Hints
 
-- `budgetUtils.ts`: parses budget strings, calculates group totals, categorizes (budget/mid-range/luxury)
-- `validateBookingForm.ts`: returns first validation error from form state
-- `filterDestinations.ts`: filters by search text and pace
-
-### Internationalization
-
-All UI text flows through `react-i18next`. Three languages: English (`en`), Lithuanian (`lt`), Mandarin Chinese (`zh`).
-
-- `src/i18n/index.ts`: initializes i18next, auto-detects browser language, persists choice to `localStorage` (`northstar-language` key), updates `<html lang>`
-- `src/i18n/locales/`: full translation JSON files — includes not just labels but entire destination data, FAQs, guides, and policy text
-- `src/i18n/content.ts`: `useLocalizedContent()` hook — typed access to structured content (destinations, FAQs, steps, guides, months, etc.)
-
-When adding new user-facing text, add keys to all three locale files and access via `useTranslation()` or `useLocalizedContent()`.
-
-### Data types
-
-`src/data/destinations.ts` defines core types: `Destination` (id, name, country, bestFor, pace, priceFrom, flightTime, blurb, highlights[]) and `TravelPace` (`slow | balanced | fast`).
-
-## Kata Validation
-
-This repo is an AI kata collection. Each branch is a separate exercise.
-
-**Mechanical validation:** `npm run validate` — runs build + lint + coverage. Exits 0/1 for CI.
-
-**Qualitative validation:** `/validate` skill — detects which kata branch you're on, runs automated checks, assesses code quality, and gives structured ✅/⚠️/❌ feedback per criterion. See `.claude/skills/validate/` for details.
+- **Read `Gruntfile.js` first** before changing anything — understand the build pipeline before modifying it.
+- **Check Node and npm versions** — this project predates Node 18+; some Grunt plugins may have compatibility issues.
+- **Bower may need global install**: `npm install -g bower` then `bower install`.
+- **Use the working app as a baseline** — make the original run first, then use its behavior as acceptance criteria for the rewrite.
+- **Plan before coding** — ask AI to produce a migration plan (component mapping, data model, routing) before generating new code.
+- **Preserve the core workflow** — drag-and-drop form building is the critical path; verify it works at each stage.
