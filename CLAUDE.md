@@ -57,6 +57,44 @@ When adding new user-facing text, add keys to all three locale files and access 
 
 `src/data/destinations.ts` defines core types: `Destination` (id, name, country, bestFor, pace, priceFrom, flightTime, blurb, highlights[]) and `TravelPace` (`slow | balanced | fast`).
 
-## Kata task
+## OpenSpec Workflow
 
-This branch is for the OpenSpec Development kata. An OpenSpec specification will drive new feature development. Create the spec first, then implement against it.
+This branch is for the **OpenSpec Development kata**. The workflow is:
+
+1. **Draft a spec** — ask AI to write an OpenSpec document describing the feature before touching code
+2. **Review** — refine acceptance criteria until they are unambiguous
+3. **Implement** — work feature by feature, linking each commit to the spec section it satisfies
+4. **Verify** — confirm every acceptance criterion has a corresponding test
+
+### Spec file location
+
+Place your spec at the project root, e.g. `SPEC.md` or `open-spec.yaml`.
+
+### Spec structure (suggested)
+
+```
+## Overview
+[what and why]
+
+## Requirements
+[numbered list of must-haves]
+
+## Acceptance Criteria
+[testable, binary checks — each maps to a test]
+
+## Constraints
+[tech constraints, non-goals]
+```
+
+### Commit traceability
+
+Reference spec sections in commit messages:
+
+```
+feat(filters): implement pace filter per spec §3.2
+test(filters): verify pace filter acceptance criteria §3.2
+```
+
+### OpenSpec reference
+
+https://openspec.ai
