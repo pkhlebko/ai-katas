@@ -14,7 +14,7 @@ allowed-tools: Read Glob Grep Bash Edit Write
 ```
 
 Without arguments, auto-detects the kata from the current git branch.
-With a number (2–7, or 4a/4b), validates that specific kata.
+With a number (1-7, or 4a/4b), validates that specific kata.
 
 ## Kata Detection
 
@@ -22,6 +22,7 @@ Read the current branch name with `git branch --show-current` and match:
 
 | Branch pattern | Kata |
 |---|---|
+  kata-1-start    — Kata 1: Legacy Modernization
 | `kata-2-start` or `feat/i18n` | 2: Internationalization |
 | `kata-3-start` or `unit-test-coverage` | 3: Unit Test Coverage |
 | `kata-4-claude-start` or `claude-skills` | 4a: Skills (Claude) |
@@ -36,6 +37,7 @@ If the branch doesn't match any kata, suggest which branches to checkout:
 ```
 This branch (main) is not a kata branch.
 Available kata branches:
+  kata-1-start    — Kata 1: Legacy Modernization
   kata-2-start    — Kata 2: Internationalization
   kata-3-start    — Kata 3: Unit Test Coverage
   kata-4-claude-start — Kata 4a: Skills (Claude)
