@@ -40,7 +40,7 @@ to know exactly what to check for each kata.
 | 1 | Build passes | `npm run build` exits 0 |
 | 2 | Lint passes | `npm run lint` exits 0 |
 | 3 | i18n config exists | `src/i18n/index.ts` exists |
-| 4 | Locale files exist | `src/i18n/locales/en.json`, `lt.json`, `zh.json` all exist |
+| 4 | Locale files exist | `src/i18n/locales/en.ts`, `lt.ts`, `zh.ts` all exist |
 | 5 | Language switcher exists | Grep `LanguageSwitcher` or language-related component in `src/components/` or `src/pages/` |
 | 6 | localStorage persistence | Check `src/i18n/index.ts` for `localStorage` or `lookup` from `i18next-browser-languagedetector` |
 
@@ -48,7 +48,7 @@ to know exactly what to check for each kata.
 
 | # | Criterion | How to Check |
 |---|-----------|---------------|
-| 1 | All 3 locales complete | Compare key counts across `en.json`, `lt.json`, `zh.json`. Flag any locale missing > 5% of keys. |
+| 1 | All 3 locales complete | Compare key counts across `en.ts`, `lt.ts`, `zh.ts`. Flag any locale missing > 5% of keys. |
 | 2 | `useLocalizedContent()` hook used | Grep for `useLocalizedContent` in components. Should appear in at least `HomePage.tsx`. |
 | 3 | `<html lang>` updates | Check `src/i18n/index.ts` or language switcher for `document.documentElement.lang` update. |
 | 4 | No hardcoded English in JSX | Grep components for common English patterns: `>Home<`, `>About<`, `>Contact<`, `"Welcome"`, `"Search"` etc. inside `.tsx` files. Any match is a ❌. |
@@ -56,7 +56,7 @@ to know exactly what to check for each kata.
 
 ### Failure Advice
 
-- **Missing locale keys**: Run a diff between `en.json` keys and the other locale keys. List specific missing keys.
+- **Missing locale keys**: Run a diff between `en.ts` keys and the other locale keys. List specific missing keys.
 - **Hardcoded English**: Show the file, line, and the string found. Suggest the translation key to use instead.
 - **No language switcher**: Suggest adding a `LanguageSwitcher` component that calls `i18n.changeLanguage()`.
 
