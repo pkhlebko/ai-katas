@@ -5,6 +5,32 @@ to know exactly what to check for each kata.
 
 ---
 
+## Kata 1: Legacy Modernization
+
+### Automated Checks
+
+| # | Check | Command / Method |
+|---|-------|------------------|
+| 1 | Deliverable note exists | Check for `DELIVERABLE.md`, `KATA-NOTES.md`, or any notes file in the working directory |
+| 2 | External repo referenced | Grep notes file for `angular-form-builder` or `kelp404` |
+
+### Qualitative Checks
+
+| # | Criterion | How to Check |
+|---|-----------|--------------|
+| 1 | Original app ran successfully | Ask participant to describe the baseline behavior they established before rewriting |
+| 2 | Modern stack used | Check the rewritten project for React, Vue, or Angular 17+ — not AngularJS 1.x |
+| 3 | All 4 new controls present | Verify: switch/toggle control, date picker, dark theme, theme switcher |
+| 4 | Core workflow preserved | Confirm drag-and-drop form building still works in the modernized version |
+
+### Failure Advice
+
+- **No deliverable note**: Ask the participant to create a `DELIVERABLE.md` describing the modernized app and linking to the repo or demo.
+- **Still using AngularJS**: The kata requires a full rewrite. AngularJS patches or upgrades do not satisfy the modernization goal.
+- **Missing controls**: Each of the four additions (switch/toggle, date picker, dark theme, theme switcher) must be independently verifiable.
+
+---
+
 ## Kata 2: Internationalization
 
 ### Automated Checks
@@ -203,7 +229,8 @@ If the branch is `main` or doesn't match any kata pattern, print:
 This branch is not a kata branch.
 
 Available kata branches:
-  git checkout kata-2-start        — Kata 2: Internationalization
+  git checkout kata-1-start         — Kata 1: Legacy Modernization (external repo)
+  git checkout kata-2-start         — Kata 2: Internationalization
   git checkout kata-3-start         — Kata 3: Unit Test Coverage
   git checkout kata-4-claude-start  — Kata 4a: Skills (Claude)
   git checkout kata-4-cursor-start  — Kata 4b: Skills (Cursor)
@@ -214,6 +241,6 @@ Available kata branches:
 Reference solution branches:
   git checkout feat/i18n            — Kata 2: Reference (i18n completed)
   git checkout unit-test-coverage   — Kata 3: Reference (95% coverage)
-  git checkout claude-skills         — Kata 4a: Reference (Claude skills)
-  git checkout cursor-skills         — Kata 4b: Reference (Cursor skills)
+  git checkout claude-skills        — Kata 4a: Reference (Claude skills)
+  git checkout cursor-skills        — Kata 4b: Reference (Cursor skills)
 ```
