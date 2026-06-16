@@ -229,18 +229,18 @@ If the branch is `main` or doesn't match any kata pattern, print:
 This branch is not a kata branch.
 
 Available kata branches:
-  git checkout kata-1-start         — Kata 1: Legacy Modernization (external repo)
-  git checkout kata-2-start         — Kata 2: Internationalization
-  git checkout kata-3-start         — Kata 3: Unit Test Coverage
-  git checkout kata-4-claude-start  — Kata 4a: Skills (Claude)
-  git checkout kata-4-cursor-start  — Kata 4b: Skills (Cursor)
-  git checkout openspec-development — Kata 5: OpenSpec Development
-  git checkout ai-kata-mcp          — Kata 6: MCP
-  git checkout discovery-codemie    — Kata 7: Codemie
+  git checkout kata-1-start              — Kata 1: Legacy Modernization (external repo)
+  git checkout kata-2-start              — Kata 2: Internationalization
+  git checkout kata-3-start              — Kata 3: Unit Test Coverage
+  git checkout kata-4-claude-start       — Kata 4a: Skills (Claude)
+  git checkout kata-4-cursor-start       — Kata 4b: Skills (Cursor)
+  git checkout kata-5-start              — Kata 5: OpenSpec Development
+  git checkout kata-6-start              — Kata 6: MCP
+  git checkout kata-7-start              — Kata 7: Codemie
 
 Reference solution branches:
-  git checkout feat/i18n            — Kata 2: Reference (i18n completed)
-  git checkout unit-test-coverage   — Kata 3: Reference (95% coverage)
-  git checkout claude-skills        — Kata 4a: Reference (Claude skills)
-  git checkout cursor-skills        — Kata 4b: Reference (Cursor skills)
+  git checkout kata-2-reference          — Kata 2: Reference (i18n completed)
+  git checkout kata-3-reference          — Kata 3: Reference (95% coverage)
+  git checkout kata-4-claude-reference   — Kata 4a: Reference (Claude skills)
+  git checkout kata-4-cursor-reference   — Kata 4b: Reference (Cursor skills)
 ```

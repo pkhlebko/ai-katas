@@ -23,13 +23,13 @@ Read the current branch name with `git branch --show-current` and match:
 | Branch pattern | Kata |
 |---|---|
 | `kata-1-start` | 1: Legacy Modernization |
-| `kata-2-start` or `feat/i18n` | 2: Internationalization |
-| `kata-3-start` or `unit-test-coverage` | 3: Unit Test Coverage |
-| `kata-4-claude-start` or `claude-skills` | 4a: Skills (Claude) |
-| `kata-4-cursor-start` or `cursor-skills` | 4b: Skills (Cursor) |
-| `openspec-development` | 5: OpenSpec Development |
-| `ai-kata-mcp` | 6: MCP |
-| `discovery-codemie` | 7: Codemie |
+| `kata-2-start` or `kata-2-reference` | 2: Internationalization |
+| `kata-3-start` or `kata-3-reference` | 3: Unit Test Coverage |
+| `kata-4-claude-start` or `kata-4-claude-reference` | 4a: Skills (Claude) |
+| `kata-4-cursor-start` or `kata-4-cursor-reference` | 4b: Skills (Cursor) |
+| `kata-5-start` | 5: OpenSpec Development |
+| `kata-6-start` | 6: MCP |
+| `kata-7-start` | 7: Codemie |
 | `main` or other | Not a kata branch — list available branches |
 
 If the branch doesn't match any kata, suggest which branches to checkout:
@@ -37,14 +37,18 @@ If the branch doesn't match any kata, suggest which branches to checkout:
 ```
 This branch (main) is not a kata branch.
 Available kata branches:
-  kata-1-start    — Kata 1: Legacy Modernization
-  kata-2-start    — Kata 2: Internationalization
-  kata-3-start    — Kata 3: Unit Test Coverage
-  kata-4-claude-start — Kata 4a: Skills (Claude)
-  kata-4-cursor-start — Kata 4b: Skills (Cursor)
-  openspec-development — Kata 5: OpenSpec Development
-  ai-kata-mcp     — Kata 6: MCP
-  discovery-codemie — Kata 7: Codemie
+  kata-1-start             — Kata 1: Legacy Modernization
+  kata-2-start             — Kata 2: Internationalization
+  kata-2-reference         — Kata 2: Reference solution
+  kata-3-start             — Kata 3: Unit Test Coverage
+  kata-3-reference         — Kata 3: Reference solution
+  kata-4-claude-start      — Kata 4a: Skills (Claude)
+  kata-4-claude-reference  — Kata 4a: Reference (Claude)
+  kata-4-cursor-start      — Kata 4b: Skills (Cursor)
+  kata-4-cursor-reference  — Kata 4b: Reference (Cursor)
+  kata-5-start             — Kata 5: OpenSpec Development
+  kata-6-start             — Kata 6: MCP
+  kata-7-start             — Kata 7: Codemie
 ```
 
 ## Validation Flow
